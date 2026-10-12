@@ -1,0 +1,5 @@
+import {createAsyncThunk,createSlice} from '@reduxjs/toolkit';
+const BASE=import.meta.env.VITE_API_URL||'http://localhost:3001';
+export const fetchSettings=createAsyncThunk('settings/fetch',async()=>{const r=await fetch(`${BASE}/settings/1`);if(!r.ok)throw Error('Settings API unavailable');return r.json();});
+export const saveSettings=createAsyncThunk('settings/save',async changes=>{const r=await fetch(`${BASE}/settings/1`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify(changes)});if(!r.ok)throw Error('Settings save failed');return r.json();});
+const slice=createSlice({name:'settings',initialState:{theme:'vs-dark',fontSize:14,tabSize:2,status:'idle',error:null},reducers:{},extraReducers:b=>b.addCase(fetchSettings.fulfilled,(s,a)=>{Object.assign(s,a.payload);s.status='succeeded';}).addCase(saveSettings.fulfilled,(s,a)=>{Object.assign(s,a.payload);s.error=null;}).addMatcher(a=>a.type.startsWith('settings/')&&a.type.endsWith('/rejected'),(s,a)=>{s.error=a.error.message;})});export default slice.reducer;

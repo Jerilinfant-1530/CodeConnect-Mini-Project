@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "id": "1",
+      "name": "index.html",
+      "content": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <title>CodeConnect Test</title>\r\n  <style>\r\n    body {\r\n      background-color: #e8f4ff;\r\n      text-align: center;\r\n      font-family: Arial;\r\n      padding: 40px;\r\n    }\r\n\r\n    h1 {\r\n      color: blue;\r\n    }\r\n  </style>\r\n</head>\r\n<body>\r\n  <h1>Welcome to CodeConnect!</h1>\r\n  <p>Live Preview is Working!</p>\r\n  <button onclick=\"alert('Button Working!')\">\r\n    Click Me\r\n  </button>\r\n</body>\r\n</html>"
+    },
+    {
+      "id": "2",
+      "name": "style.css",
+      "content": "h1 { color: blue; }"
+    },
+    {
+      "id": "3",
+      "name": "script.js",
+      "content": "console.log('Hello CodeConnect!');"
+    },
+    {
+      "id": "api-test-1",
+      "name": "backend-test.txt",
+      "content": "Hello from JSON Server API!"
+    },
+    {
+      "id": "V7UO0Ayu6O4",
+      "name": "post-test.js",
+      "content": "console.log(\"PATCH API Working!\");"
+    },
+    {
+      "id": "tpLD0AOjZXc",
+      "name": "autosave-test.js",
+      "content": "console.log(\"CodeConnect Auto Save Working!\");",
+      "folderId": null
+    }
+  ],
+  "settings": [
+    {
+      "id": "1",
+      "theme": "vs-dark",
+      "fontSize": 15,
+      "tabSize": 2
+    }
+  ],
+  "folders": [
+    {
+      "id": "y23kOv2qPUk",
+      "name": "my-components",
+      "parentId": null
+    }
+  ],
+  "workspace": [
+    {
+      "id": "1",
+      "openTabs": [
+        "1",
+        "2",
+        "tpLD0AOjZXc",
+        "3"
+      ],
+      "activeFileId": "1"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
